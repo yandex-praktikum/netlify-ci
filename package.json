@@ -24,6 +24,8 @@
     "gulp": "^4.0.2",
     "gulp-concat-css": "^3.1.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "postcss": "^8.4.23",
     "prettier": "^2.8.7",
     "stylelint": "^15.4.0"
   },
