@@ -27,6 +27,7 @@
     "gulp-concat-css": "^3.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
+    "html-minifier": "^4.0.0",
     "postcss": "^8.4.23",
     "postcss-combine-media-query": "^1.0.1",
     "prettier": "^2.8.7",

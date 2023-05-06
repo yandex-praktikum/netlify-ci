@@ -7,6 +7,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const mediaquery = require('postcss-combine-media-query');
 const cssnano = require('cssnano');
+const htmlMinify = require('html-minifier');
 
 function serve() {
   browserSync.init({
@@ -17,8 +18,23 @@ function serve() {
 }
 
 function html() {
+  const options = {
+	  removeComments: true,
+	  removeRedundantAttributes: true,
+	  removeScriptTypeAttributes: true,
+	  removeStyleLinkTypeAttributes: true,
+	  sortClassName: true,
+	  useShortDoctype: true,
+	  collapseWhitespace: true,
+		minifyCSS: true,
+		keepClosingSlash: true
+	};
   return gulp.src('src/**/*.html')
         .pipe(plumber())
+        .on('data', function(file) {
+		      const buferFile = Buffer.from(htmlMinify.minify(file.contents.toString(), options))
+		      return file.contents = buferFile
+		    })
 				.pipe(gulp.dest('dist/'))
         .pipe(browserSync.reload({stream: true}));
 }
