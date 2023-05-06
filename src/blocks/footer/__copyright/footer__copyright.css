@@ -1,3 +1,9 @@
 .footer__copyright {
   text-align: right;
 }
+
+@media screen and (max-width: 600px) {
+  .footer__copyright {
+    text-align: left;
+  }
+}

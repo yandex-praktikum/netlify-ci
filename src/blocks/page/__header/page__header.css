@@ -1,3 +1,9 @@
 .page__header {
   color: tomato;
 }
+
+@media screen and (max-width: 600px) {
+  .page__header {
+    color: white;
+  }
+}

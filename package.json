@@ -19,13 +19,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
     "browser-sync": "^2.29.1",
+    "cssnano": "^6.0.1",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-concat-css": "^3.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
     "postcss": "^8.4.23",
+    "postcss-combine-media-query": "^1.0.1",
     "prettier": "^2.8.7",
     "stylelint": "^15.4.0"
   },
